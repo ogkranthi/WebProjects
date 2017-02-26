@@ -1,0 +1,18 @@
+jsonstr = {
+	"listID"          : ["State","City","Domain","Company","URL"],
+	"listID0"         : ["Newyork","California"],
+	"Newyork"         : ["Newyork city","Rochester"],
+	"California"      : ["Cupertino", "Mountain View"],
+	"Newyork city"    : ["NYbanking","NYsoftware"],
+	"Rochester"       : ["ROCInvestment", "ROCsoftware"],
+	"Cupertino"       : ["CupBanking"],
+	"Mountain View"   : ["MVbanking","MVInvestment"],
+	"NYbanking"       : ["Chase", "Barclays"],
+    "NYsoftware"      : ["Morgan Stanley software"],
+    "ROCInvestment"   : ["ROC Investments"],
+    "ROCsoftware"     : ["Kodak","RSA"],
+    "CupBanking"      : ["Apple banking"],
+    "MVbanking"       : ["Mt bank"],
+    "MVInvestment"    : ["Mt Investments"],
+    "userChoice"      : [],
+};

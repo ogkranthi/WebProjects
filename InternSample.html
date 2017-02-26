@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Sample</title>
+    <script type = "text/javascript" src = "sample.jsonp">
+
+    </script>
+
+
+
+    <script>
+
+        function myfunction(listid){
+
+
+            console.log(listid);
+            var selected = document.getElementById("listID"+listid).value;
+            console.log("selected is "+selected+"listId is"+listid);
+           // listid = listid + 1;
+            firstDropDown(selected,listid);
+            console.log("selected is "+selected+"listId is"+listid);
+
+        }
+
+        function deleteNodes(listid) {
+            console.log("inside delete nodes");
+            var deleteID = 4;
+            var deleteChoice = jsonstr["userChoice"];
+            // var curselectedindex    = document.getElementById(currentID).selectedIndex;
+            // var curselectedObject   = document.getElementById(currentID).options[curselectedindex];
+            // console.log("curently selected : "+ curselectedObject.text);
+          //  deleteChoice.pop(objtext);
+            while (deleteID > listid) {
+                var present = document.getElementById("listID" + (deleteID));
+                console.log("present inside while loop 1 is:"+present);
+                if (present != 'listID0' && present != null) {
+                    console.log("inside already present");
+                  //   deleteChoice.pop(present);
+                    present.parentNode.removeChild(present);
+
+
+                    console.log("deleted choice" + deleteChoice);
+                }
+
+                deleteID = deleteID - 1;
+            }
+
+            deleteID = 4;
+            while (deleteID > listid) {
+                var newpresent = document.getElementById("listID" + (deleteID));
+                console.log("present inside while loop 2 is:"+newpresent);
+                if (present != 'listID0' && present != null) {
+                    deleteChoice.pop(newpresent);
+                    console.log("deleted and popped choice" + deleteChoice);
+                }
+
+                deleteID = deleteID - 1;
+            }
+
+        }
+
+        function selectfunc(){
+            document.getElementById("listID0").value = "select";
+        }
+
+    </script>
+</head>
+<body style="background-color: lemonchiffon;">
+<span style = "color: darkslategray;font-family: Chalkboard" >Internship</span>
+
+<div id = "div1">
+
+    <button type = button id = "reset" onclick = "deleteNodes(0);selectfunc();">RESET</button>
+
+</div>
+
+</body>
+
+<script type = "text/javascript" src = "SampleInternJs.js"></script>
+</html>
